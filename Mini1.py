@@ -42,9 +42,9 @@ while(1):
         print r.status_code
         break
 
-#1.door status closed na check pir sensor
+#1.door status closed then check pir sensor
 2.pir status interrupt achuna take pic send to messu & do opening/closing
-#3.note motor status so that ifs interrupt button pressed decides one action.
+#3.note motor status so that if interrupt button pressed decides one action.
 
 def reed_op(channel):
     while(GPIO.input(reed)):
@@ -169,7 +169,7 @@ cv2.destroyAllWindows()
 ans=sorted(range(len(base1)),key=lambda k:base1[k])
 #print ans
 base1.sort()
-if (base1[0]<30):                                      ################################################################base is here
+if (base1[0]<30):                                     #base is here
     #print "ur recognised"+path1[ans[0]]
     msg= "open"
     msg1= path1[ans[0]]
